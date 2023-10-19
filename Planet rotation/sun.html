@@ -15,7 +15,18 @@
     overflow: hidden;
 
  }
-
+h2{
+    background-color: yellow;
+    border: 3px salmon;
+    border-radius: 5px;
+    color: crimson;
+    text-align: center;
+    position: absolute;
+    top: 0em;
+    left: 22.4em;
+    width: 16.8em;
+    height: 1.2em;
+}
  .container{
     font-size: 6px;
     width: 47em;
@@ -32,7 +43,8 @@
     height: 10em;
     background-color: rgb(238, 255, 0);
     border-radius: 50%;
-    box-shadow: 0 0 3em rgb(249, 229, 130);
+    box-shadow: 0 0 6em rgb(249, 229, 130);
+    /* animation: orbit 0.5s linear infinite; */
 }
  
  .mercury{
@@ -58,7 +70,7 @@
     left: 8em;
     width: 25em;
     height: 25em;
-    animation: orbit 30s linear infinite;
+    animation: orbit 22s linear infinite;
 }
 .venus::before{
     content: "";
@@ -121,7 +133,7 @@ background-color: silver;
     left: -5em;
     width: 51em;
     height: 51em;
-    animation: orbit 18s linear infinite;
+    animation: orbit 15s linear infinite;
 }
 .mars::before{
     content: "";
@@ -156,7 +168,7 @@ background-color: silver;
     left: -17em;
     width: 76em;
     height: 76em;
-    animation: orbit 40.5s linear infinite;
+    animation: orbit 17s linear infinite;
 }
 .saturn::before{
     content: "";
@@ -168,6 +180,25 @@ background-color: silver;
     height: 5em;
     background-color: rgb(95, 67, 12);
 }
+ 
+.saturn::before, 
+.ring::before{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0 0 1em rgb(135, 220, 228);
+}
+
+.ring::before{
+      border: 0px solid rgb(131, 224, 252);
+      box-shadow:  0 0 2em rgb(135, 220, 228);
+      border-radius: 50%;
+      top: 9em;
+     right: 6.5em;
+      width: 6.3em;
+     height: 7em;
+}
+
 .Uranus{
     top: -24em;
     left: -24em;
@@ -201,21 +232,18 @@ background-color: silver;
     width: 4em;
     height: 4em;
     background-color: rgb(144, 183, 255);
+    box-shadow: 0 0 3em rgb(221, 230, 231);
 }
 @keyframes orbit{
     to{
         transform: rotate(360deg);
     }
 }
- /* @keyframes orbit {
-    to{
-        transform: rotate(-360deg);
-    }
-} */
 
      </style>
 </head>
 <body>
+    <h2>Rotate Our Planets something like this</h2>
     <div class="container">
         <div class="sun"></div>
         <div class="mercury"></div>
@@ -225,7 +253,9 @@ background-color: silver;
         </div>
         <div class="mars"></div>
         <div class="jupitar"></div>
-        <div class="saturn"></div>
+        <div class="saturn">
+            <div class="ring"></div>
+        </div>
         <div class="Uranus"></div>
         <div class="neptune"></div>
 
